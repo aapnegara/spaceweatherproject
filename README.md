@@ -1,6 +1,6 @@
-#Explainable Solar Flare Forecasting with SHARP Parameters
+# Explainable Solar Flare Forecasting with SHARP Parameters
 
-Group 1 project for the Space Weather course at KU Leuven (2024–2025).
+Group 1 project for the Space Weather course at KU Leuven (2025–2026)
 Supervisors: Panagiotis Gonidakis
 
 Pipeline
