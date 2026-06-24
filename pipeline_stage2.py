@@ -505,35 +505,9 @@ plt.savefig(
 print("Saved: tsne.png")
 
 
-# =============================================================================
-# Section 7 — Point-Biserial Correlation
-# =============================================================================
-# Measures the linear association between each SHARP parameter (continuous)
-# and the binary flare label. This provides one of the three converging
-# justification signals for the final feature set (alongside RF stability
-# from Stage 1 and Pearson inter-feature correlation from Section 2).
-#
-# Note on MEANPOT: near-zero point-biserial correlation at the static
-# snapshot level does not contradict its inclusion. Point-biserial measures
-# only linear marginal association on instantaneous values. RF captures
-# nonlinear interactions and is sensitive to temporal buildup patterns
-# that are invisible to a marginal correlation coefficient.
-# =============================================================================
-
-print("\n" + "="*65)
-print("Section 7 — Point-Biserial Correlation (final 8)")
-print("="*65)
-
-print(f"\n  {'Parameter':<12} {'Correlation':>12} {'p-value':>14} {'Signal':>10}")
-print("  " + "-" * 52)
-for i, param in enumerate(final_params):
-    corr, pval = stats.pointbiserialr(y, X_raw[:, i])
-    signal = "strong" if abs(corr) > 0.05 else ("moderate" if abs(corr) > 0.02 else "weak")
-    print(f"  {param:<12} {corr:>12.4f} {pval:>14.2e} {signal:>10}")
-
 
 # =============================================================================
-# Section 8 — Random Forest: Leave-One-Year-Out Cross-Validation × 2 Cases
+# Section 7 — Random Forest: Leave-One-Year-Out Cross-Validation × 2 Cases
 # =============================================================================
 # Each calendar year (2010–2019) serves once as the test set while all other
 # years are used for training. This evaluates inter-year generalization and
@@ -786,7 +760,7 @@ for case_name, case_cfg in cases.items():
 
 
 # =============================================================================
-# Section 9 — Feature Importance: Case 2 vs Case 3 Comparison
+# Section 8 — Feature Importance: Case 2 vs Case 3 Comparison
 # =============================================================================
 # Compares RF feature importance rankings across the two case definitions.
 # Consistency between cases indicates the ranking reflects genuine physical
@@ -820,7 +794,7 @@ print("Saved: rf_importance_comparison.png")
 
 
 # =============================================================================
-# Section 10 — Summary
+# Section 9 — Summary
 # =============================================================================
 
 print("\n" + "="*65)
