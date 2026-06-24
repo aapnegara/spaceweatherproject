@@ -848,11 +848,11 @@ for case_name, metrics in results_summary.items():
 # M/X flare occurrence — a known limitation of the dataset, not the model.
 # =============================================================================
 
-years_case2 = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
-tss_case2   = [0.592, 0.687, 0.688, 0.688, 0.671, 0.744, 0.734, 0.782, 0.781]
+years_case2 = [int(y) for y in results_summary['Case2_FlareVsNoFlare']['split_names']]
+tss_case2   = results_summary['Case2_FlareVsNoFlare']['tss_arr']
 
-years_case3 = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
-tss_case3   = [0.113, 0.743, 0.697, 0.680, 0.682, 0.682, 0.704, 0.938]
+years_case3 = [int(y) for y in results_summary['Case3_AlertVsNoAlert']['split_names']]
+tss_case3   = results_summary['Case3_AlertVsNoAlert']['tss_arr']
 
 fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharey=False)
 
