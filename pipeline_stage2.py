@@ -10,10 +10,9 @@ Takes the 8 SHARP parameters selected in Stage 1 (feature_stability.py) and runs
   4.  PCA: scree plot, loadings, 2D projection coloured by flare label
   5.  K-Means clustering with elbow plot and Kneedle-based K selection
   6.  t-SNE 2D visualization coloured by flare label and cluster
-  7.  Point-biserial correlation table (feature selection justification)
-  8.  Random Forest — Leave-One-Year-Out cross-validation × 2 cases
-  9.  Feature importance comparison: Case 2 vs Case 3
-  10. Summary
+  7.  Random Forest — Leave-One-Year-Out cross-validation × 2 cases
+  8.  Feature importance comparison: Case 2 vs Case 3
+  9. Summary
 
 Classification scheme (Baeke et al. 2025, MNRAS):
   Case 2 — Flare (C+M+X) vs No-Flare
